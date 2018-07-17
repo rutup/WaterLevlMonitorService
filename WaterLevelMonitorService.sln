@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WaterLevelMonitorProcessor"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WaterLevelCheckerDomain", "WaterLevelCheckerDomain\WaterLevelCheckerDomain.csproj", "{695C584D-1589-4189-B284-902629DCD90C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SendPushNotification", "SendPushNotification\SendPushNotification.csproj", "{7A340B63-55A4-4713-8888-68335B772750}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,8 +29,15 @@ Global
 		{695C584D-1589-4189-B284-902629DCD90C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{695C584D-1589-4189-B284-902629DCD90C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{695C584D-1589-4189-B284-902629DCD90C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7A340B63-55A4-4713-8888-68335B772750}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7A340B63-55A4-4713-8888-68335B772750}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7A340B63-55A4-4713-8888-68335B772750}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7A340B63-55A4-4713-8888-68335B772750}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {21EFAC0A-CCBD-4E8F-A23B-F50379B074C3}
 	EndGlobalSection
 EndGlobal
