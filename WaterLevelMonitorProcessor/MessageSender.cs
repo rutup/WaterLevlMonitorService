@@ -19,8 +19,20 @@ namespace WaterLevelMonitorProcessor
             _serviceClient = ServiceClient.CreateFromConnectionString(ConfigurationManager.AppSettings["IOTHubConnectionString"]);
         }
 
-        public async Task SendBeaconMessage(string deviceName, IOTMessageFormat message)
+        public async Task<string> TurnOnWater(string deviceName)
         {
+            IOTMessageFormat message = new IOTMessageFormat { message ="Turn On Water"};
+            var messageString = JsonConvert.SerializeObject(message);
+            var commandMessage = new Message(Encoding.ASCII.GetBytes(messageString));
+            commandMessage.MessageId = Guid.NewGuid().ToString();
+            commandMessage.Ack = DeliveryAcknowledgement.Full;
+            await _serviceClient.SendAsync(deviceName, commandMessage);
+            return "Sent";
+        }
+
+        public async Task TurnOFFWater(string deviceName)
+        {
+            IOTMessageFormat message = new IOTMessageFormat { message = "Turn OFF Water" };
             var messageString = JsonConvert.SerializeObject(message);
             var commandMessage = new Message(Encoding.ASCII.GetBytes(messageString));
             commandMessage.MessageId = Guid.NewGuid().ToString();

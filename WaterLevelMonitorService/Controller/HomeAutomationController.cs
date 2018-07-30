@@ -16,18 +16,20 @@ namespace WaterLevelMonitorService.Controller
         HomeAutomationController() {
             _sender = new MessageSender();
         }
-        [Route("Health")]
+        [Route("Basic")]
         public string Get()
         {
+            Console.WriteLine("adasd");
+            Console.ReadLine();
             return "Working";
         }
 
-        [Route("TurnOn")]
-        [Route("TurnOff")]
+        [Route("SupplyWater")]  
         [HttpGet]
         public string SendNotificationToDevice()
         {
-            return "Working";
+           return _sender.TurnOnWater("myFirstDevice").Result.ToString();
+
         }
 
        

@@ -23,7 +23,7 @@ namespace WaterLevelMonitorService
             //};
             //ServiceBase.Run(ServicesToRun);
             //WaterLevelMonitorService w = new WaterLevelMonitorService();
-            WebApp.Start<MyApiHost>("http://localhost:9001");
+            WebApp.Start<MyApiHost>("http://192.168.1.3:80/");
             while (true)
             {
                
